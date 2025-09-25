@@ -24,6 +24,7 @@ export default defineConfig({
   server: {
     port: 5173,
     host: true, // Allow external connections
+    allowedHosts: ["frontend-ai-fitness-app.onrender.com", "frontend-n5aw.onrender.com", ".onrender.com"],
     proxy: {
       '/api': {
         target: 'http://localhost:8081',
@@ -37,7 +38,7 @@ export default defineConfig({
   preview: {
     port: 4173,
     host: true,
-    allowedHosts: ["frontend-n5aw.onrender.com", ".onrender.com"]
+    allowedHosts: ["frontend-ai-fitness-app.onrender.com", "frontend-n5aw.onrender.com", ".onrender.com"]
   },
 
   // Base path configuration
